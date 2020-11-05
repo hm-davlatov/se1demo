@@ -14,10 +14,13 @@ var http = require('http');
 var requestListener = function(request, response) {
   response.writeHead(200, {'content-type': 'text/html; charset=utf-8}'});
   // create a html document as response
-  var doc = '<h3>Welcome to Software Engineering 1</h3>'
-            + '<p>This a <b>simple</b> example of <i>html markup</i></p>'
-            + '<p>node.js documentation: <a href="https://nodejs.org/dist/latest-v4.x/docs/api/http.html">click here</a></p>'
-            + '<p>html reference: <a href="https://selfhtml.org" target="_blank">click here</a></p>'
+  var doc = `
+        Willkommen, hier sind ein paar Änderungen in HTML
+        <ul>
+          <li><b>Fetter Text</b></li>
+          <li><i>Kursivvvv</i></li>
+          <li><u>Underline</u></li>
+  `
   response.end(doc);
 }
 
